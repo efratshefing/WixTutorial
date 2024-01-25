@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+
+<Wix xmlns="http://wixtoolset.org/schemas/v4/wxs">
+
+	
+  <Package Name="WixTutorialPackage" Manufacturer="Shefing Concepts" Version="1.0.0.0" UpgradeCode="eb5595f8-ecc7-48c2-9cef-9b0948bd4752">
+
+	  <Property Id="AccountKey" Value="YourDefaultAccountKey" />
+	  <Property Id="DeviceType" Value="YourDefaultDeviceType" />
+	  <Property Id="ServiceUrl" Value="http://your-default-service-url" />
+
+	  <Launch Condition="Installed OR (AccountKey AND DeviceType AND ServiceUrl)" Message="AccountKey, DeviceType, and ServiceUrl must be provided on first install."/>
+
+
+	  <Binary Id="WixValidation" SourceFile="WixValidation.CA.dll" />
+	  <CustomAction Id="ValidateArguments"  BinaryRef="WixValidation" DllEntry="CustomAction1" />
+
+
+	  <InstallExecuteSequence>
+		  <Custom Action="ValidateArguments" After="InstallInitialize" ></Custom>
+	  </InstallExecuteSequence>
+	
+	  
+	<MajorUpgrade DowngradeErrorMessage="!(loc.DowngradeError)"/>
+	  
+	 
+	<MediaTemplate EmbedCab="yes" />
+	  
+    <Feature Id="Main">
+      <ComponentGroupRef Id="AppComponents" />
+    </Feature>
+	  
+	  
+	  
+	  
+	  
+  </Package>
+
+
+</Wix>

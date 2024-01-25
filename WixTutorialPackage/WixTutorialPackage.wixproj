@@ -1,0 +1,6 @@
+﻿<Project Sdk="WixToolset.Sdk/4.0.3">
+  <ItemGroup>
+    <ProjectReference Include="..\App\App.csproj" />
+    <ProjectReference Include="..\WixValidation\WixValidation.csproj" />
+  </ItemGroup>
+</Project>

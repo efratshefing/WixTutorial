@@ -1,0 +1,30 @@
+<Wix xmlns="http://wixtoolset.org/schemas/v4/wxs">
+  <Fragment>
+    <ComponentGroup Id="AppComponents" Directory="INSTALLFOLDER">
+
+		<Component Id="RegistryEntries" Guid="{28BD459E-0949-4006-A9DD-4F6B5382A3F2}">
+			<RegistryKey Root="HKLM" Key="Software\YourCompany\YourApplication">
+				<RegistryValue Name="AccountKey" Value="[AccountKey]" Type="string" />
+				<RegistryValue Name="DeviceType" Value="[DeviceType]" Type="string" />
+				<RegistryValue Name="ServiceUrl" Value="[ServiceUrl]" Type="string" />
+			</RegistryKey>
+		</Component>
+
+
+		<Component Id="AppExe" Guid="{72EBEC3D-1340-4BDA-BD3D-098838D4551F}">
+        <File Source="App.exe" />
+      </Component>
+
+	  <Component Id="MyAppShortcut" Guid="{CA317A10-41B1-48B6-A46A-3B88203BB1C7}">
+			<!-- Define your files, registry entries, etc. -->
+
+			<Shortcut Id="ApplicationStartMenuShortcut"
+						Name="WixTutorialPackage"
+						Description="Your App Description"
+						Target="[INSTALLFOLDER]App.exe"
+					     WorkingDirectory="INSTALLFOLDER"/>
+	  </Component>
+		
+    </ComponentGroup>
+  </Fragment>
+</Wix>
