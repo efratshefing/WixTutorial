@@ -11,7 +11,7 @@ namespace WixValidation
         [CustomAction]
         public static ActionResult CustomAction1(Session session)
         {
-            session.Log("Efrat## Begin CustomAction1");
+            session.Log("Efrat### Begin CustomAction1");
 
             // Validate AccountKey
             //string accountKey = session["ACCOUNTKEY"];
@@ -36,6 +36,8 @@ namespace WixValidation
                 return ActionResult.Failure;
             }
 
+            session.Log($"Efrat### Valid DeviceType: {deviceType}");
+
             // Validate ServiceUrl
             string serviceUrl = session["SERVICEURL"];
             if (!IsValidUrl(serviceUrl))
@@ -46,6 +48,9 @@ namespace WixValidation
                 session.Log($"Efrat## Invalid ServiceUrl: {serviceUrl}");
                 return ActionResult.Failure;
             }
+
+            session.Log($"Efrat### Valid ServiceUrl: {serviceUrl}");
+
 
             return ActionResult.Success;
         }

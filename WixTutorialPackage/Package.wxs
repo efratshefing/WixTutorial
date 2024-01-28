@@ -5,8 +5,8 @@
 	
   <Package Name="WixTutorialPackage" Manufacturer="Shefing Concepts" Version="2.0.0.0" UpgradeCode="eb5595f8-ecc7-48c2-9cef-9b0948bd4752">
 
-	  <Property Id="AccountKey" Value="YourDefaultAccountKey" />
-	  <Property Id="DeviceType" Value="YourDefaultDeviceType" />
+	  <Property Id="AccountKey" Value="1234" />
+	  <Property Id="DeviceType" Value="Type1" />
 	  <Property Id="ServiceUrl" Value="http://your-default-service-url" />
 
 	  <Launch Condition="Installed OR (AccountKey AND DeviceType AND ServiceUrl)" Message="AccountKey, DeviceType, and ServiceUrl must be provided on first install."/>
