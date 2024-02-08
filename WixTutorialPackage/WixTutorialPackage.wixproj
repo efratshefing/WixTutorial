@@ -2,6 +2,8 @@
   <ItemGroup>
     <ProjectReference Include="..\..\..\..\..\Users\אפרת שיפינג\Dojo\BeltTest\BeltTest\WindowsService1\WindowsService1.csproj" />
     <ProjectReference Include="..\App\App.csproj" />
+    <ProjectReference Include="..\start\start.csproj" />
+    <ProjectReference Include="..\WindowsService1\WindowsService1.csproj" />
     <ProjectReference Include="..\WixValidation\WixValidation.csproj" />
   </ItemGroup>
   <ItemGroup>
