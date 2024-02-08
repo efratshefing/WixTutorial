@@ -1,0 +1,15 @@
+<Configuration>
+  <MappedFolders>
+    <MappedFolder>
+      <HostFolder>..\WixTutorialPackage\bin\x86\Debug\en-US</HostFolder>
+      <SandboxFolder>C:\msi</SandboxFolder>
+    </MappedFolder>
+	  <MappedFolder>
+		  <HostFolder>.\</HostFolder>
+		  <SandboxFolder>C:\dojo</SandboxFolder>
+	  </MappedFolder>
+  </MappedFolders>
+  <LogonCommand>
+    <Command>C:\dojo\dojostart.cmd</Command>
+  </LogonCommand>
+</Configuration>
