@@ -2,6 +2,36 @@
   <Fragment>
     <ComponentGroup Id="AppComponents" Directory="INSTALLFOLDER">
 
+
+		<!--<Component Id="MyServiceComponent" Guid="{D0D2802E-8198-4B14-85C2-AAB6D411B99B}">
+			<File Source="YourServiceExecutable.exe" />-->
+
+			<!-- Service installation --><!--
+			<ServiceInstall
+				Id="MyServiceInstall"
+				Type="ownProcess"
+				Vital="yes"
+				Name="YourServiceName"
+				DisplayName="Your Service Display Name"
+				Description="Description of your service"
+				Start="auto"
+				Account="LocalSystem"
+				ErrorControl="normal"
+				Interactive="no">
+			</ServiceInstall>
+
+			--><!-- Service control --><!--
+			<ServiceControl
+				Id="MyServiceControl"
+				Name="YourServiceName"
+				Start="install"
+				Stop="both"
+				Remove="uninstall"
+				Wait="yes">
+			</ServiceControl>
+		</Component>-->
+
+
 		<Component Id="RegistryEntries" Guid="{28BD459E-0949-4006-A9DD-4F6B5382A3F2}">
 			<RegistryKey Root="HKLM" Key="Software\YourCompany\YourApplication">
 				<RegistryValue Name="AccountKey" Value="[AccountKey]" Type="string" />

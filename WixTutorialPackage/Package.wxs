@@ -1,18 +1,28 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 
-<Wix xmlns="http://wixtoolset.org/schemas/v4/wxs">
+<Wix xmlns="http://wixtoolset.org/schemas/v4/wxs" xmlns:netfx="http://schemas.wixtoolset.org/wixnetfxextension">
 
-	
-  <Package Name="WixTutorialPackage" Manufacturer="Shefing Concepts" Version="2.0.0.0" UpgradeCode="eb5595f8-ecc7-48c2-9cef-9b0948bd4752">
+		
+	<Package Name="WixTutorialPackage_0" Manufacturer="Shefing Concepts" Version="4.0.0.0" UpgradeCode="eb5595f8-ecc7-48c2-9cef-9b0948bd4752">
 
+	  <MajorUpgrade DowngradeErrorMessage="!(loc.DowngradeError)"/>
+	  
 	  <Property Id="AccountKey" Value="1234" />
 	  <Property Id="DeviceType" Value="Type1" />
 	  <Property Id="ServiceUrl" Value="http://your-default-service-url" />
 
 	  <Launch Condition="Installed OR (AccountKey AND DeviceType AND ServiceUrl)" Message="AccountKey, DeviceType, and ServiceUrl must be provided on first install."/>
+		
+		<!-- .NET Core SDK search -->
+		<!--<PropertyRef Id="NETCORESDKFOUND" />
+		
+		<netfx:DotNetCoreSdkSearch MajorVersion="7" Variable="NETCORESDKFOUND" />
+
+		--><!-- Condition for .NET 7 --><!--
+		<Launch Condition="Installed OR NETCORESDKFOUND" Message="This application requires .NET 7. Please install the required version."/>-->
 
 
-	  <Binary Id="WixValidation" SourceFile="WixValidation.CA.dll" />
+		<Binary Id="WixValidation" SourceFile="WixValidation.CA.dll" />
 	  <CustomAction Id="ValidateArguments"  BinaryRef="WixValidation" DllEntry="CustomAction1" />
 
 
@@ -21,13 +31,15 @@
 	  </InstallExecuteSequence>
 	
 	  
-	<MajorUpgrade DowngradeErrorMessage="!(loc.DowngradeError)"/>
+	
 	  
 	 
 	<MediaTemplate EmbedCab="yes" />
 	  
     <Feature Id="Main">
       <ComponentGroupRef Id="AppComponents" />
+	  <ComponentGroupRef Id="WindowsServiceComponents" />
+
     </Feature>
 	  
 	  
@@ -35,6 +47,6 @@
 	  
 	  
   </Package>
-
+		
 
 </Wix>

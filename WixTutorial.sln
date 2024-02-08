@@ -7,7 +7,9 @@ Project("{B7DD6F7E-DEF8-4E67-B5B7-07EF123DB6F0}") = "WixTutorialPackage", "WixTu
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "App", "App\App.csproj", "{F345E5BF-16DF-4A58-BA8F-61ACF27CCB3F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WixValidation", "WixValidation\WixValidation.csproj", "{8312E0D9-4D28-40A2-82F7-B3359BCCAF7F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WixValidation", "WixValidation\WixValidation.csproj", "{8312E0D9-4D28-40A2-82F7-B3359BCCAF7F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WindowsService1", "..\..\..\..\Users\אפרת שיפינג\Dojo\BeltTest\BeltTest\WindowsService1\WindowsService1.csproj", "{F3661E5F-EFF8-444E-AF4F-C11FA273A56D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -69,6 +71,22 @@ Global
 		{8312E0D9-4D28-40A2-82F7-B3359BCCAF7F}.Release|x64.Build.0 = Release|Any CPU
 		{8312E0D9-4D28-40A2-82F7-B3359BCCAF7F}.Release|x86.ActiveCfg = Release|Any CPU
 		{8312E0D9-4D28-40A2-82F7-B3359BCCAF7F}.Release|x86.Build.0 = Release|Any CPU
+		{F3661E5F-EFF8-444E-AF4F-C11FA273A56D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F3661E5F-EFF8-444E-AF4F-C11FA273A56D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F3661E5F-EFF8-444E-AF4F-C11FA273A56D}.Debug|ARM64.ActiveCfg = Debug|Any CPU
+		{F3661E5F-EFF8-444E-AF4F-C11FA273A56D}.Debug|ARM64.Build.0 = Debug|Any CPU
+		{F3661E5F-EFF8-444E-AF4F-C11FA273A56D}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{F3661E5F-EFF8-444E-AF4F-C11FA273A56D}.Debug|x64.Build.0 = Debug|Any CPU
+		{F3661E5F-EFF8-444E-AF4F-C11FA273A56D}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{F3661E5F-EFF8-444E-AF4F-C11FA273A56D}.Debug|x86.Build.0 = Debug|Any CPU
+		{F3661E5F-EFF8-444E-AF4F-C11FA273A56D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F3661E5F-EFF8-444E-AF4F-C11FA273A56D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F3661E5F-EFF8-444E-AF4F-C11FA273A56D}.Release|ARM64.ActiveCfg = Release|Any CPU
+		{F3661E5F-EFF8-444E-AF4F-C11FA273A56D}.Release|ARM64.Build.0 = Release|Any CPU
+		{F3661E5F-EFF8-444E-AF4F-C11FA273A56D}.Release|x64.ActiveCfg = Release|Any CPU
+		{F3661E5F-EFF8-444E-AF4F-C11FA273A56D}.Release|x64.Build.0 = Release|Any CPU
+		{F3661E5F-EFF8-444E-AF4F-C11FA273A56D}.Release|x86.ActiveCfg = Release|Any CPU
+		{F3661E5F-EFF8-444E-AF4F-C11FA273A56D}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

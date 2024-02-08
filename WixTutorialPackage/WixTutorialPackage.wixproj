@@ -1,6 +1,13 @@
 ﻿<Project Sdk="WixToolset.Sdk/4.0.3">
   <ItemGroup>
+    <ProjectReference Include="..\..\..\..\..\Users\אפרת שיפינג\Dojo\BeltTest\BeltTest\WindowsService1\WindowsService1.csproj" />
     <ProjectReference Include="..\App\App.csproj" />
     <ProjectReference Include="..\WixValidation\WixValidation.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="WindowsService1\**" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Remove="WindowsService1\**" />
   </ItemGroup>
 </Project>
